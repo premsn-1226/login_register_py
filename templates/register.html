@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %} 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method=POST action="{{ url_for('register') }}">
+                <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" name="email" />
+            </div>
+            <div class="input-field">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <input type="number" placeholder="Mobile Number" name="number" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="pass" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            </form>
+            <br>
+            <div>
+                Do you have an account? <a href="{{ url_for('index') }}">Sign in here</a>.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
